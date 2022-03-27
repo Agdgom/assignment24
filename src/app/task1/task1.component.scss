@@ -1,0 +1,50 @@
+.btn {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  &__load {
+    background-color: #1521c4;
+    color: #ffffff;
+  }
+}
+
+.loading {
+  margin-left: 3rem;
+}
+
+.users-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    width: 30%;
+    height: max-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #2280a5;
+    margin-right: 2rem;
+  }
+}
+
+.status {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.red {
+  background-color: #bb0505;
+}
+
+.blue {
+  background-color: #0808cc;
+}
+
+.green {
+  background-color: #12a812;
+}

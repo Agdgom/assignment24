@@ -1,0 +1,27 @@
+<section class="box">
+  <button class="btn btn__load" (click)="loadUsers()">Load users</button>
+  <span *ngIf="loading" class="loading">Loading...</span>
+</section>
+<br />
+
+<h3 *ngIf="loaded">
+  Users: <span *ngFor="let user of users">{{ user.name }}; &nbsp;</span>
+</h3>
+<div class="users-wrapper">
+  <ng-container *ngFor="let user of users">
+    <div class="users-wrapper__item" *ngIf="loaded" appActive>
+      <h1>{{ user.name }} {{ user.lastname }}</h1>
+      <p>{{ user.about }} {{ user.name }}</p>
+      <p>{{ user.birthDate | age }} years old</p>
+      <span
+        class="status"
+        [ngClass]="{
+          red: user.status === 'Detected',
+          green: user.status === 'Active',
+          blue: user.status === 'Inactive'
+        }"
+        >{{ user.status }}</span
+      >
+    </div>
+  </ng-container>
+</div>
